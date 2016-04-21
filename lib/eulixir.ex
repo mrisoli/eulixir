@@ -1,4 +1,4 @@
-defmodule Runner do
+defmodule Eulixir do
   def measure(function) do
     function
     |> :timer.tc
@@ -14,5 +14,3 @@ defmodule Runner do
     end
   end
 end
-
-Runner.run

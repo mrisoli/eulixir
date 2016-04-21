@@ -1,0 +1,21 @@
+v2.
+{<<"_build/dev/lib/eulixir/ebin/Elixir.Prob2.beam">>,'Elixir.Prob2',module,
+ <<"lib/prob2.ex">>,
+ ['Elixir.Kernel','Elixir.Integer'],
+ [erlang,'Elixir.IO','Elixir.Bitwise'],
+ [],nil}.
+{<<"_build/dev/lib/eulixir/ebin/Elixir.Prob1.beam">>,'Elixir.Prob1',module,
+ <<"lib/prob1.ex">>,
+ ['Elixir.Kernel'],
+ [erlang,'Elixir.IO','Elixir.Enum','Elixir.Range'],
+ [],nil}.
+{<<"_build/dev/lib/eulixir/ebin/Elixir.Prob3.beam">>,'Elixir.Prob3',module,
+ <<"lib/prob3.ex">>,
+ ['Elixir.Kernel'],
+ [],[],nil}.
+{<<"_build/dev/lib/eulixir/ebin/Elixir.Eulixir.beam">>,'Elixir.Eulixir',
+ module,<<"lib/eulixir.ex">>,
+ ['Elixir.Kernel'],
+ [erlang,'Elixir.IO',timer,'Elixir.String.Chars','Elixir.Integer',
+  'Elixir.Code'],
+ [],nil}.

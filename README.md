@@ -4,6 +4,11 @@ Project Euler Solutions in Elxir
 
 # instructions
 
-To compile&run problem runner:
+To compile
 
-elixirc *.ex
+    mix compile
+
+Run inside iex with mix:
+
+    iex -s mix
+    iex>Eulixir.run
