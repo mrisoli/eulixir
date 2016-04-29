@@ -1,5 +1,5 @@
 defmodule Prob9 do
-  def triplet(a,b) do
+  defp triplet(a,b) do
     c = 1000 - a - b
     cond do
       c * c == (a * a) + (b * b) -> a * b * c
