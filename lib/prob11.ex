@@ -22,14 +22,14 @@ defmodule Prob11 do
 
 
   def run do
-    all_products
+    all_products()
     |> List.flatten
     |> Enum.max
     |> IO.puts
   end
 
   defp all_products do
-    0..19 |> Enum.map(fn(x) -> Enum.map(0..19, fn(y) -> all_combinations(x,y) end) end)
+    0..19 |> Stream.map(fn(x) -> Stream.map(0..19, fn(y) -> all_combinations(x,y) end) end)
   end
 
   defp all_combinations(x,y) do

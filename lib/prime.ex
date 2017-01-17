@@ -16,12 +16,12 @@ defmodule Prime do
     end )
   end
 
-  def take(n) when is_integer(n), do: Enum.take(stream, n)
+  def take(n) when is_integer(n), do: Enum.take(stream(), n)
 
   def get(n) when is_integer(n), do: take(n) |> List.last
 
   def up_to(n) when is_integer(n) do
-    stream
+    stream()
     |> Stream.take_while(&(&1 < n))
     |> Enum.to_list
   end
@@ -54,7 +54,7 @@ defmodule Prime do
     do: n |> distribution |> list
 
     def list(dict) when is_list(dict),
-    do: Dict.keys dict
+    do: Keyword.keys(dict)
 
     def list({ :error, reason }),
     do: { :error, reason }

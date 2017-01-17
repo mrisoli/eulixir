@@ -24,7 +24,7 @@ defmodule Prob17 do
   end
 
   def run do
-    String.length(@thousand) + (String.length(@hundred) * 900) + sum_units + sum_dozens + sum_ands + sum_tens
+    String.length(@thousand) + (String.length(@hundred) * 900) + sum_units() + sum_dozens() + sum_ands() + sum_tens()
     |> IO.puts
   end
 end

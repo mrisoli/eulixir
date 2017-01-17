@@ -14,9 +14,9 @@ defmodule Prob14 do
     |> Stream.filter(&(Integer.is_odd(&1)))
     |> Map.new(fn x -> {x, sequence_size_for(x) + 1} end)
   end
-  
+
   def run do
-    c = chains
+    c = chains()
     Enum.find(Map.keys(c), &(c[&1] == Enum.max(Map.values(c))))
     |> IO.puts
   end

@@ -1,5 +1,5 @@
 defmodule Prob25 do
-  defp fib(a, b, i) do 
+  defp fib(a, b, i) do
     case Enum.count(Integer.digits(a)) do
       1000 -> i
       _ -> fib(a + b, a, i + 1)

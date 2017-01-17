@@ -24,7 +24,7 @@ defmodule Prob18 do
   end
 
   def run do
-    triangle = setup_triangle
+    triangle = setup_triangle()
     add_level_up(triangle, Enum.count(triangle))
     |> IO.puts
   end
