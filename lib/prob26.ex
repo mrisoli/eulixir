@@ -16,6 +16,5 @@ defmodule Prob26 do
     |> Enum.max_by(fn {_, v} -> v end)
     |> elem(0)
     |> IO.puts
-    #|> Enum.find(&(fn {_, v} -> v == Enum.max(Keyword.values(&1)) end))
   end
 end
