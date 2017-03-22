@@ -23,7 +23,6 @@ defmodule Prime do
   def up_to(n) when is_integer(n) do
     stream()
     |> Stream.take_while(&(&1 < n))
-    |> Enum.to_list
   end
 
   defp next_prime([]), do: 2
