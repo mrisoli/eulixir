@@ -1,5 +1,10 @@
 require Integer
 defmodule Numbers do
+  def triangle?(n) do
+    val = :math.sqrt((8 * n) + 1)
+    val == Float.floor(val)
+  end
+
   def triangle(n) do
     round((n * (n + 1))/2)
   end
