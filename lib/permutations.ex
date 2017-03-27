@@ -1,4 +1,10 @@
 defmodule Permutations do
+  def digits(list) do
+    list
+    |> permute
+    |> Enum.map(fn(x) -> String.to_integer(Enum.join(x, "")) end)
+  end
+
   def permute([]), do: [[]]
   def permute(list) do
     for x <- list, y <- permute(list -- [x]), do: [x|y]
