@@ -4,7 +4,7 @@ defmodule Prob22 do
     sum_list(tail, count + 1, accumulator + string_value(head, count))
   end
   defp string_value(s, mult) do
-    Enum.sum(Enum.map(to_char_list(s), &(&1 - 64))) * mult
+    Enum.sum(Enum.map(to_charlist(s), &(&1 - 64))) * mult
   end
   def run do
     {:ok, file} = File.read "data/p022_names.txt"
