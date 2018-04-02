@@ -4,9 +4,10 @@ defmodule Eulixir.Mixfile do
   def project do
     [app: :eulixir,
      version: "0.0.1",
-     elixir: "~> 1.2",
+     elixir: "~> 1.6",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     escript: escript(),
      deps: deps()]
   end
 
@@ -14,7 +15,7 @@ defmodule Eulixir.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :timex]]
+    [applications: [:logger]]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +28,10 @@ defmodule Eulixir.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:timex, "~> 2.1.4"}]
+    []
+  end
+
+  defp escript do
+    [main_module: Eulixir.CLI]
   end
 end

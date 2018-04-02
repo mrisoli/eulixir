@@ -1,20 +1,18 @@
-use Timex
 defmodule Prob19 do
-  defp check_for_first_of_month(date, count) do
-    case date == Timex.beginning_of_month(date) do
-      true -> count_sundays(Timex.shift(date, days: 7), count + 1)
-      _ -> count_sundays(Timex.shift(date, days: 7), count)
-    end
+  @max_date ~D[2000-12-31]
+
+  def first_of_month?(1), do: 1
+  def first_of_month?(_), do: 0
+
+  defp count_sundays(:gt, date, count) do
+    new_date = Date.add(date, 7)
+    count_sundays(Date.compare(@max_date, new_date), new_date, count + first_of_month?(date.day))
   end
 
-  defp count_sundays(date, count) do
-    case Timex.before?(date, Timex.date({2000,12,31})) do
-      true -> check_for_first_of_month(date, count)
-      _ -> count
-    end
-  end
+  defp count_sundays(_, _date, count), do: count
 
   def run do
-    count_sundays(Timex.date({1901, 1, 6}), 0) |> IO.puts
+    start_date = ~D[1901-01-06]
+    count_sundays(Date.compare(@max_date, start_date), start_date, 0) |> IO.puts
   end
 end
