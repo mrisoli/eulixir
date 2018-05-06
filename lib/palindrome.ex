@@ -1,5 +1,5 @@
 defmodule Palindrome do
   def number?(n) do
-    n == String.reverse("#{n}") |> Integer.parse |> elem(0)
+    n == String.reverse("#{n}") |> String.to_integer
   end
 end
