@@ -7,7 +7,7 @@ defmodule Eulixir do
   end
 
   def run(n) do
-    fn -> Code.eval_string("Prob#{n}.run") end |> measure |> IO.puts
+    fn -> apply(:"Elixir.Prob#{n}", :run, []) end |> measure |> IO.puts
   end
 
   def run do
