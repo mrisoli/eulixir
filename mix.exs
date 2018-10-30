@@ -4,7 +4,7 @@ defmodule Eulixir.Mixfile do
   def project do
     [app: :eulixir,
      version: "0.0.1",
-     elixir: "~> 1.6",
+     elixir: "~> 1.7",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      escript: escript(),

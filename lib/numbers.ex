@@ -1,4 +1,3 @@
-require Integer
 defmodule Numbers do
   def triangle?(n) do
     val = :math.sqrt((8 * n) + 1)
@@ -34,5 +33,8 @@ defmodule Numbers do
     |> Enum.sort
     sorted == Enum.to_list(1..9)
   end
+
+  def pow(n, 1), do: n
+  def pow(n, p), do: n * pow(n, p - 1)
 end
 
